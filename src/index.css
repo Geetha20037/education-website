@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #172033;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #ddd6fe;
+  color: #4c1d95;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a78bfa;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f3ff;
+}
+
+.container-width {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.gradient-text {
+  background: linear-gradient(110deg, #6d28d9, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-gradient {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(196,181,253,.35), transparent 32%),
+    linear-gradient(120deg, #f5f3ff 0%, #fafaff 55%, #eef2ff 100%);
+}
+
+.section-label {
+  color: #7c3aed;
+  background: #f3e8ff;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.card-hover {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(49, 36, 94, .11);
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 13px 15px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  background: #fff;
+}
+
+.form-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139,92,246,.12);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .container-width {
+    width: min(100% - 28px, 1180px);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/* Hide scrollbar but keep scrolling enabled */
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Reduce excessive left and right spacing */
+.max-w-7xl,
+.max-w-6xl,
+.max-w-5xl,
+.max-w-4xl {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Keep only small responsive side spacing */
+.px-6 {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.px-8 {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+.container {
+  max-width: 100% !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* Smaller spacing on mobile */
+@media (max-width: 640px) {
+  .px-6,
+  .px-8,
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
